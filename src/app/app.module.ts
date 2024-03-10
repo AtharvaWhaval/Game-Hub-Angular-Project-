@@ -3,14 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { GameGenreCardsComponent } from './components/game-genre-cards/game-genre-cards.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/Authentication Components/login/login.component';
+import { SignupComponent } from './components/Authentication Components/signup/signup.component';
+import { IndexComponent } from './components/index/index.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    GameGenreCardsComponent,
+    FooterComponent,
+    SignupComponent,
+    LoginComponent,
+    IndexComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

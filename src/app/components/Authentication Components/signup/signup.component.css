@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    /* background-color: aqua; */
+}
+.signup {
+    /* text-align: left; */
+    /* border: solid 1px grey; */
+    padding: 20px;
+    border-radius: 10px;
+   
+}
+
+.form-content {
+    padding: 5px;
+}
+.row {
+    display: flex;
+    gap: 10px;
+
+    /* mat-form-field {
+        width: 100%;
+    } */
+}
+/* .input-field {
+    margin: 10px;
+    
+} */
+
+.noto-sans {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 24;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+      margin: 5px;
+      color: white;
+      font-size: xx-large;
+    
+  }
+
+  .roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    
+  }
+
+  .inputError {
+    color: red;
+    font-size: small;
+    height: 7px;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    
+  }
+  .input-field {
+    background-color: #32353c;
+    border-color: #32353c;
+    border-radius: 2px;
+    color: white;
+    width: 80%;
+  }
+  /* .signin-label {
+    color: #1999ff;
+    font-weight: 500;
+  } */
+  .input-field-label {
+    color: #afafaf;
+    font-size: 16px;
+  }
+.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-style {
+    width: 20%;
+    height: 50px;
+    border-color: none;
+    border: none;
+    background-image: linear-gradient(to left, rgb(35, 122, 252), rgb(15, 214, 198));
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+} 
+.signup-div {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-heading {
+    text-align: left;
+    margin:20px;
+    justify-content: start;
+    align-items: start;
+    width:600px;
+}

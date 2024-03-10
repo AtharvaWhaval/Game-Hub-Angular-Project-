@@ -1,0 +1,210 @@
+<div
+  style="
+    background-image: url(https://dlcdnwebimgs.asus.com/files/media/92A296C4-BA56-40C2-A462-AE2729261A0B/main/v1/images/large/1x/bg_armoury_crate_1.jpg);
+  "
+>
+  <div class="container">
+    <div class="page-heading">
+      <h1 class="noto-sans">CREATE YOUR ACCOUNT</h1>
+    </div>
+    <div class="signup">
+      <form
+        class="form-content"
+        [formGroup]="signupForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <div class="row">
+          <div class="col">
+            <div class="mb-3" style="text-align: start">
+              <label for="firstName" class="form-label input-field-label"
+                >First Name</label
+              >
+              <input
+                type="email"
+                class="form-control input-field"
+                id="firstName"
+                aria-describedby="emailHelp"
+                formControlName="firstName"
+              />
+              <div
+                id="emailHelp"
+                class="inputError"
+                *ngIf="
+                  this.signupForm.controls.firstName.touched &&
+                  this.signupForm.controls.firstName.invalid
+                "
+              >
+                Firstname is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="mb-3" style="text-align: start">
+              <label for="lastName" class="form-label input-field-label"
+                >Last Name</label
+              >
+              <input
+                type="email"
+                class="form-control input-field"
+                id="lastName"
+                aria-describedby="emailHelp"
+                formControlName="lastName"
+              />
+              <div
+                id="emailHelp"
+                *ngIf="
+                  this.signupForm.controls.lastName.touched &&
+                  this.signupForm.controls.lastName.invalid
+                "
+                class="inputError"
+              >
+                Lastname is required.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="mb-3" style="text-align: start">
+              <label for="userName" class="form-label input-field-label"
+                >Username</label
+              >
+              <input
+                type="text"
+                class="form-control input-field"
+                id="userName"
+                aria-describedby="emailHelp"
+                formControlName="userName"
+              />
+              <div
+                id="emailHelp"
+                *ngIf="
+                  this.signupForm.controls.userName.touched &&
+                  this.signupForm.controls.userName.invalid
+                "
+                class="inputError"
+              >
+                Username is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="mb-3" style="text-align: start">
+              <label for="email" class="form-label input-field-label"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control input-field"
+                id="email"
+                aria-describedby="emailHelp"
+                formControlName="email"
+              />
+              <div
+                id="emailHelp"
+                *ngIf="
+                  this.signupForm.controls.email.touched &&
+                  this.signupForm.controls.email.invalid
+                "
+                class="inputError"
+              >
+                Email is required.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <!-- <mat-form-field appearance="outline" class="input-field">
+              <mat-label>Password</mat-label>
+              <input
+                matInput
+                [type]="isPasswordVisible ? 'text' : 'password'"
+                formControlName="password"
+              />
+              <mat-icon
+                matSuffix
+                color="primary"
+                (click)="togglePasswordVisibililty()"
+                >{{ passwordIconToDisplay }}</mat-icon
+              >
+            </mat-form-field> -->
+
+            <div class="mb-3" style="text-align: start">
+              <label for="password" class="form-label input-field-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control input-field"
+                id="password"
+                aria-describedby="emailHelp"
+                formControlName="password"
+              />
+              <div
+                id="emailHelp"
+                *ngIf="
+                  this.signupForm.controls.password.touched &&
+                  this.signupForm.controls.password.invalid
+                "
+                class="inputError"
+              >
+                Password is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- <mat-form-field appearance="outline" class="input-field">
+              <mat-label>Confirm Password</mat-label>
+              <input
+                matInput
+                [type]="isConfirmPasswordVisible ? 'text' : 'password'"
+                formControlName="confirmPassword"
+              />
+              <mat-icon
+                matSuffix
+                color="primary"
+                (click)="toggleConfirmPasswordVisibililty()"
+                >{{ confirmPasswordIconToDisplay }}</mat-icon
+              >
+            </mat-form-field> -->
+            <div class="mb-3" style="text-align: start">
+              <label for="confirmPassword" class="form-label input-field-label"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                class="form-control input-field"
+                id="confirmPassword"
+                aria-describedby="emailHelp"
+                formControlName="confirmPassword"
+              />
+              <div
+                id="emailHelp"
+                *ngIf="
+                  this.signupForm.controls.confirmPassword.touched &&
+                  this.signupForm.controls.confirmPassword.invalid
+                "
+                class="inputError"
+              >
+                Confirm Password is required.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="submit-button">
+          <button class="button-style" type="submit">Create Account</button>
+        </div>
+        <div class="signup-div">
+          <a routerLink="/login" style="color: #afafaf"><u>Sign in</u></a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

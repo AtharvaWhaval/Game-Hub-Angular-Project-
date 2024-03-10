@@ -1,0 +1,73 @@
+<div
+  style="
+    background-image: url(https://dlcdnwebimgs.asus.com/files/media/92A296C4-BA56-40C2-A462-AE2729261A0B/main/v1/images/large/1x/bg_armoury_crate_1.jpg);
+  "
+>
+  <div class="container">
+    <div class="page-heading">
+      <h1 class="noto-sans">Sign in</h1>
+    </div>
+
+    <div class="login">
+      <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+        <!-- <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="userName" />
+        <mat-icon matSuffix color="primary">account_circle</mat-icon>
+      </mat-form-field> -->
+        <div class="mb-3" style="text-align: start">
+          <label for="exampleInputEmail1" class="form-label signin-label"
+            >SIGN IN WITH ACCOUNT USERNAME</label
+          >
+          <input
+            type="text"
+            class="form-control input-field"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            formControlName="userName"
+          />
+          <!-- <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div> -->
+        </div>
+        <br />
+        <!-- <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          [type]="isPasswordVisible ? 'text' : 'password'"
+          formControlName="password"
+        />
+        <mat-icon
+          matSuffix
+          color="primary"
+          (click)="togglePasswordVisibililty()"
+          >{{ passwordIconToDisplay }}</mat-icon
+        >
+      </mat-form-field> -->
+        <div class="mb-3" style="text-align: start">
+          <label for="exampleInputEmail1" class="form-label password-label"
+            >PASSWORD</label
+          >
+          <input
+            type="password"
+            class="form-control input-field"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            formControlName="password"
+          />
+          <!-- <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div> -->
+        </div>
+
+        <div class="submit-button">
+          <button class="button-style" type="submit">Sign in</button>
+        </div>
+        <div class="signup-div">
+          <a routerLink="/signup" style="color: #afafaf"><u>Sign up</u></a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

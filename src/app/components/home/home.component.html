@@ -1,0 +1,133 @@
+<!-- Your Bootstrap Carousel HTML code -->
+<div id="carouselExampleCaptions" class="carousel slide">
+  <!-- Carousel Indicators -->
+  <div class="carousel-indicators">
+    <button
+      *ngFor="let game of upcomingGames; let i = index"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      [attr.data-bs-slide-to]="i"
+      [class.active]="i === currentSlideIndex"
+      (click)="changeSlide(i)"
+    ></button>
+  </div>
+
+  <!-- Carousel Slides -->
+  <div class="carousel-inner">
+    <div
+      *ngFor="let game of upcomingGames; let i = index"
+      class="carousel-item"
+      [class.active]="i === currentSlideIndex"
+    >
+      <img
+        [src]="game.gameImg"
+        class="d-block w-100"
+        [alt]="game.gameName"
+        style="height: 500px"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h1>{{ game.gameName }}</h1>
+        <!-- <p>{{ game.gameDescription }}</p> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
+    (click)="prevSlide()"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+    (click)="nextSlide()"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- <div id="card-area">
+  <div class="wrapper">
+    <div class="box-area">
+      <div class="box">
+        <img
+          alt=""
+          src="https://www.cbc.ca/kids/images/shootthecannon_thumbnail.jpg"
+        />
+        <div class="overlay">
+          <h3>Mountaineering</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque modi
+            explicabo libero ea nam. Quod.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <img
+          alt=""
+          src="https://www.cbc.ca/kids/images/shootthecannon_thumbnail.jpg"
+        />
+        <div class="overlay">
+          <h3>Scuba Diving</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque modi
+            explicabo libero ea nam. Quod.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <img
+          alt=""
+          src="https://www.cbc.ca/kids/images/shootthecannon_thumbnail.jpg"
+        />
+        <div class="overlay">
+          <h3>Travel World</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque modi
+            explicabo libero ea nam. Quod.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Game Genre -->
+<section>
+  <div>
+    <h1 class="section-headings">Game Genre</h1>
+  </div>
+  <div class="team-area row">
+    <div
+      class="box col-md-4"
+      *ngFor="let genre of gameGenre"
+      (click)="(openGenrePage)"
+    >
+      <figcaption>
+        <h2>{{ genre.genreName }}</h2>
+      </figcaption>
+
+      <img alt="" [src]="genre.genreImg" style="height: 220px" />
+    </div>
+  </div>
+</section>
+
+<!-- <hr />
+<div class="footer">
+  <img
+    class=""
+    style="height: 120px; width: 200px"
+    src="../../../assets/images/Game Hub_transparent.png"
+    alt=""
+  />
+  <p>© 2024 Game Hub Inc. All rights reserved.</p>
+</div> -->
