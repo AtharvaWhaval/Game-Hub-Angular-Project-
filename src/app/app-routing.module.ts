@@ -7,6 +7,7 @@ import { IndexComponent } from './components/index/index.component';
 import { GameGenreCardsComponent } from './components/game-genre-cards/game-genre-cards.component';
 import { CanActivate } from './guards/auth-guard';
 import { NotFoundComponent } from './components/Authentication Components/not-found/not-found.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
         path: 'home/game-genre-cards/:genrename',
         component: GameGenreCardsComponent,
       },
+      {
+        path: 'profile',
+        component: ProfileComponent
+      }
     ],
   },
 ];
