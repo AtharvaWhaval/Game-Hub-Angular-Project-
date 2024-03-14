@@ -1,18 +1,34 @@
 {
   "users": [
     {
-      "username": "Atharva",
+      "userName": "Atharva",
       "password": "Atharva@6"
+    },
+    {
+      "id": "96e2",
+      "firstName": "Rajas",
+      "lastName": "Kondhare",
+      "userName": "rajas",
+      "email": "rajas@gmail.com",
+      "password": "Rajas@123",
+      "confirmPassword": "Rajasa@123"
+    },
+    {
+      "id": "f58b",
+      "firstName": "Pruthviraj",
+      "lastName": "Thopate",
+      "userName": "pruthvi",
+      "email": "pruthviraj@gmail.com",
+      "password": "Pruthviraj@1",
+      "confirmPassword": "Pruthviraj@1"
     }
   ],
-
   "admin": [
     {
       "adminname": "admin",
       "password": "admin@123"
     }
   ],
-
   "upcoming-games": [
     {
       "gameName": "Example Game 1",
@@ -39,7 +55,6 @@
       "gamePrice": "39.99"
     }
   ],
-
   "game-genre": [
     {
       "genreImg": "https://sugargamers.com/wp-content/uploads/2021/12/video-game-genras.jpeg",
@@ -64,6 +79,689 @@
     {
       "genreImg": "https://i.ebayimg.com/thumbs/images/g/fIwAAOSw~eVlXP8A/s-l640.jpg",
       "genreName": "simulation"
+    }
+  ],
+  "actionGames": [
+    {
+      "game-name": "Assassin's Creed Valhalla",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/2208920/header.jpg?t=1697654233",
+      "game-description": "Explore the Viking age as Eivor, a fierce Viking warrior.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "PlayStation 5",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "release-date": "2020-11-10",
+      "publisher": "Ubisoft"
+    },
+    {
+      "game-name": "Doom Eternal",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/782330/capsule_616x353.jpg?t=1702308063",
+      "game-description": "Battle against hordes of demons in an intense first-person shooter.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "Nintendo Switch",
+        "PC"
+      ],
+      "release-date": "2020-03-20",
+      "publisher": "Bethesda Softworks"
+    },
+    {
+      "game-name": "Cyberpunk 2077",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg?t=1706698946",
+      "game-description": "Immerse yourself in a futuristic open-world filled with crime and technology.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "PlayStation 5",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "release-date": "2020-12-10",
+      "publisher": "CD Projekt"
+    },
+    {
+      "game-name": "God of War",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1593500/capsule_616x353.jpg?t=1695758729",
+      "game-description": "Follow Kratos and his son Atreus on a journey through Norse mythology.",
+      "supported-platforms": ["PlayStation 4", "PlayStation 5"],
+      "release-date": "2018-04-20",
+      "publisher": "Sony Interactive Entertainment"
+    },
+    {
+      "game-name": "The Witcher 3: Wild Hunt",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg?t=1693590732",
+      "game-description": "Embark on a monster-hunting quest in a vast open world as Geralt of Rivia.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "Nintendo Switch",
+        "PC"
+      ],
+      "release-date": "2015-05-19",
+      "publisher": "CD Projekt"
+    },
+    {
+      "game-name": "Red Dead Redemption 2",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1695140956",
+      "game-description": "Experience the American Wild West as Arthur Morgan, an outlaw on the run.",
+      "supported-platforms": ["PlayStation 4", "Xbox One", "PC"],
+      "release-date": "2018-10-26",
+      "publisher": "Rockstar Games"
+    },
+    {
+      "game-name": "Marvel's Spider-Man",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1817070/header.jpg?t=1700663145",
+      "game-description": "Swing through New York City as Spider-Man and take on various villains.",
+      "supported-platforms": ["PlayStation 4", "PlayStation 5"],
+      "release-date": "2018-09-07",
+      "publisher": "Sony Interactive Entertainment"
+    },
+    {
+      "game-name": "Monster Hunter: World",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/582010/capsule_616x353.jpg?t=1709235093",
+      "game-description": "Hunt giant monsters in a living, breathing ecosystem.",
+      "supported-platforms": ["PlayStation 4", "Xbox One", "PC"],
+      "release-date": "2018-01-26",
+      "publisher": "Capcom"
+    },
+    {
+      "game-name": "Sekiro: Shadows Die Twice",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267",
+      "game-description": "Unleash your inner shinobi in this challenging action-adventure game.",
+      "supported-platforms": ["PlayStation 4", "Xbox One", "PC"],
+      "release-date": "2019-03-22",
+      "publisher": "Activision"
+    },
+    {
+      "game-name": "Gears 5",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1097840/capsule_616x353.jpg?t=1684425784",
+      "game-description": "Join Kait Diaz in the battle against the Swarm in this third-person shooter.",
+      "supported-platforms": ["Xbox One", "Xbox Series X/S", "PC"],
+      "release-date": "2019-09-10",
+      "publisher": "Xbox Game Studios"
+    }
+  ],
+
+  "sportGames": [
+    {
+      "game-name": "FIFA 22",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1567290/header.jpg?t=1645576748",
+      "game-description": "Experience the next level of soccer gameplay with FIFA 22.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "PlayStation 5",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "release-date": "2021-10-01",
+      "publisher": "EA Sports"
+    },
+    {
+      "game-name": "NBA 2K22",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1644960/header.jpg?t=1646724819",
+      "game-description": "Dominate the court in the latest installment of the NBA 2K series.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "PlayStation 5",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "release-date": "2021-09-10",
+      "publisher": "2K Sports"
+    },
+    {
+      "game-name": "Madden NFL 22",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1674590/header.jpg?t=1632269162",
+      "game-description": "Experience the excitement of American football in Madden NFL 22.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "PlayStation 5",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "release-date": "2021-08-20",
+      "publisher": "EA Sports"
+    },
+    {
+      "game-name": "MLB The Show 21",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1527670/header.jpg?t=1615383192",
+      "game-description": "Step up to the plate and experience the thrill of baseball in MLB The Show 21.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "PlayStation 5",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "release-date": "2021-04-20",
+      "publisher": "Sony Interactive Entertainment"
+    },
+    {
+      "game-name": "WWE 2K22",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1255630/header.jpg?t=1704736969",
+      "game-description": "Step into the ring and experience the excitement of WWE 2K22.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "PlayStation 5",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "release-date": "2022-03-11",
+      "publisher": "2K Sports"
+    },
+    {
+      "game-name": "NHL 22",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1646540/header.jpg?t=1632467254",
+      "game-description": "Experience the intensity of ice hockey in NHL 22.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "PlayStation 5",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "release-date": "2021-10-15",
+      "publisher": "EA Sports"
+    },
+    {
+      "game-name": "Tony Hawk's Pro Skater 1 + 2",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/2395210/capsule_616x353.jpg?t=1696374771",
+      "game-description": "Relive the glory days of skateboarding with Tony Hawk's Pro Skater 1 + 2.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "PlayStation 5",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "release-date": "2020-09-04",
+      "publisher": "Activision"
+    },
+    {
+      "game-name": "PGA Tour 2K21",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1016120/header.jpg?t=1623334881",
+      "game-description": "Hit the links and experience the thrill of golf in PGA Tour 2K21.",
+      "supported-platforms": ["PlayStation 4", "Xbox One", "PC"],
+      "release-date": "2020-08-21",
+      "publisher": "2K Sports"
+    },
+    {
+      "game-name": "Rocket League",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/252950/header.jpg?t=1646254647",
+      "game-description": "Soccer meets driving in Rocket League, the award-winning hybrid of arcade-style soccer and vehicular mayhem.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "Nintendo Switch",
+        "PC"
+      ],
+      "release-date": "2015-07-07",
+      "publisher": "Psyonix"
+    },
+    {
+      "game-name": "Wii Sports",
+      "game-img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ZQmU7FckPJLJRUW2HyzXsyaRrEH7jtDpztFcDpkOVg&s",
+      "game-description": "Experience a variety of sports activities on the Nintendo Wii with Wii Sports.",
+      "supported-platforms": ["Nintendo Wii"],
+      "release-date": "2006-11-19",
+      "publisher": "Nintendo"
+    }
+  ],
+  "strategyGames": [
+    {
+      "game-name": "Civilization VI",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/289070/header.jpg?t=1645566500",
+      "game-description": "Build your empire and conquer the world in Sid Meier's Civilization VI.",
+      "supported-platforms": [
+        "PC",
+        "Mac",
+        "iOS",
+        "Android",
+        "PlayStation 4",
+        "Xbox One",
+        "Nintendo Switch"
+      ],
+      "release-date": "2016-10-21",
+      "publisher": "2K Games"
+    },
+    {
+      "game-name": "Total War: Warhammer III",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1142710/header.jpg?t=1646262923",
+      "game-description": "Command powerful armies and conquer the Old World in Total War: Warhammer III.",
+      "supported-platforms": ["PC"],
+      "release-date": "2022-02-17",
+      "publisher": "Sega"
+    },
+    {
+      "game-name": "Stellaris",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/281990/header.jpg?t=1645918293",
+      "game-description": "Explore, discover, and interact with a galaxy full of diverse races in Stellaris.",
+      "supported-platforms": ["PC", "Mac", "Linux"],
+      "release-date": "2016-05-09",
+      "publisher": "Paradox Interactive"
+    },
+    {
+      "game-name": "Age of Empires IV",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1466860/header.jpg?t=1644331880",
+      "game-description": "Lead your civilization to glory in the next installment of the Age of Empires series.",
+      "supported-platforms": ["PC", "Xbox Game Pass"],
+      "release-date": "2021-10-28",
+      "publisher": "Xbox Game Studios"
+    },
+    {
+      "game-name": "Crusader Kings III",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1158310/header.jpg?t=1645991223",
+      "game-description": "Rewrite medieval history in Crusader Kings III, where you rule your dynasty.",
+      "supported-platforms": ["PC", "Mac", "Linux"],
+      "release-date": "2020-09-01",
+      "publisher": "Paradox Interactive"
+    },
+    {
+      "game-name": "Company of Heroes 3",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1497080/header.jpg?t=1645873283",
+      "game-description": "Lead your troops to victory in intense tactical battles in Company of Heroes 3.",
+      "supported-platforms": ["PC"],
+      "release-date": "TBA",
+      "publisher": "SEGA"
+    },
+    {
+      "game-name": "Europa Universalis IV",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/236850/header.jpg?t=1645779605",
+      "game-description": "Shape the world, dominate the trade routes, and spread your culture in Europa Universalis IV.",
+      "supported-platforms": ["PC", "Mac", "Linux"],
+      "release-date": "2013-08-13",
+      "publisher": "Paradox Interactive"
+    },
+    {
+      "game-name": "Hearts of Iron IV",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/394360/header.jpg?t=1645752006",
+      "game-description": "Lead your nation through World War II in Hearts of Iron IV.",
+      "supported-platforms": ["PC", "Mac", "Linux"],
+      "release-date": "2016-06-06",
+      "publisher": "Paradox Interactive"
+    },
+    {
+      "game-name": "XCOM 2",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/268500/header.jpg?t=1645750266",
+      "game-description": "Take command of the Avenger and fight against alien overlords in XCOM 2.",
+      "supported-platforms": [
+        "PC",
+        "PlayStation 4",
+        "Xbox One",
+        "Mac",
+        "Linux"
+      ],
+      "release-date": "2016-02-05",
+      "publisher": "2K Games"
+    },
+    {
+      "game-name": "Age of Empires II: Definitive Edition",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/813780/header.jpg?t=1645519690",
+      "game-description": "Experience the classic Age of Empires II in stunning 4K Ultra HD graphics.",
+      "supported-platforms": ["PC"],
+      "release-date": "2019-11-14",
+      "publisher": "Xbox Game Studios"
+    }
+  ],
+  "racingGames": [
+    {
+      "game-name": "Forza Horizon 5",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1555130/header.jpg?t=1642043394",
+      "game-description": "Experience the beauty and thrill of the open world in Forza Horizon 5.",
+      "supported-platforms": ["Xbox Series X/S", "Xbox One", "PC"],
+      "release-date": "2021-11-09",
+      "publisher": "Xbox Game Studios"
+    },
+    {
+      "game-name": "Gran Turismo 7",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1260770/header.jpg?t=1647533471",
+      "game-description": "Experience the pinnacle of automotive racing simulation in Gran Turismo 7.",
+      "supported-platforms": ["PlayStation 5", "PlayStation 4"],
+      "release-date": "2022-03-04",
+      "publisher": "Sony Interactive Entertainment"
+    },
+    {
+      "game-name": "F1 2021",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1134570/header.jpg?t=1645578942",
+      "game-description": "Immerse yourself in the world of Formula 1 racing with F1 2021.",
+      "supported-platforms": [
+        "PlayStation 5",
+        "PlayStation 4",
+        "Xbox Series X/S",
+        "Xbox One",
+        "PC"
+      ],
+      "release-date": "2021-07-16",
+      "publisher": "EA Sports"
+    },
+    {
+      "game-name": "Mario Kart 8 Deluxe",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1289410/header.jpg?t=1622569722",
+      "game-description": "Race with your favorite Nintendo characters in Mario Kart 8 Deluxe.",
+      "supported-platforms": ["Nintendo Switch"],
+      "release-date": "2017-04-28",
+      "publisher": "Nintendo"
+    },
+    {
+      "game-name": "Dirt 5",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1038250/header.jpg?t=1627303440",
+      "game-description": "Take on extreme racing challenges across the globe in Dirt 5.",
+      "supported-platforms": [
+        "PlayStation 5",
+        "PlayStation 4",
+        "Xbox Series X/S",
+        "Xbox One",
+        "PC"
+      ],
+      "release-date": "2020-11-06",
+      "publisher": "Codemasters"
+    },
+    {
+      "game-name": "Need for Speed Heat",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1222680/header.jpg?t=1583376873",
+      "game-description": "Race by day and risk it all at night in Need for Speed Heat.",
+      "supported-platforms": ["PlayStation 4", "Xbox One", "PC"],
+      "release-date": "2019-11-08",
+      "publisher": "EA"
+    },
+    {
+      "game-name": "Assetto Corsa Competizione",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/805550/header.jpg?t=1646805433",
+      "game-description": "Experience the ultimate GT racing simulation in Assetto Corsa Competizione.",
+      "supported-platforms": ["PlayStation 4", "Xbox One", "PC"],
+      "release-date": "2019-05-29",
+      "publisher": "505 Games"
+    },
+    {
+      "game-name": "Burnout Paradise Remastered",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/606150/header.jpg?t=1597850001",
+      "game-description": "Experience high-speed thrills and mayhem in Burnout Paradise Remastered.",
+      "supported-platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "Nintendo Switch",
+        "PC"
+      ],
+      "release-date": "2018-08-21",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "game-name": "The Crew 2",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/646910/header.jpg?t=1644044241",
+      "game-description": "Experience the thrill of open-world racing in The Crew 2.",
+      "supported-platforms": ["PlayStation 4", "Xbox One", "PC"],
+      "release-date": "2018-06-29",
+      "publisher": "Ubisoft"
+    },
+    {
+      "game-name": "Wipeout Omega Collection",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/621370/header.jpg?t=1574934996",
+      "game-description": "Experience the fast-paced anti-gravity racing action in Wipeout Omega Collection.",
+      "supported-platforms": ["PlayStation 4"],
+      "release-date": "2017-06-06",
+      "publisher": "Sony Interactive Entertainment"
+    }
+  ],
+  "casualGames": [
+    {
+      "game-name": "Among Us",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/945360/header.jpg?t=1642135967",
+      "game-description": "Work together to complete tasks on a spaceship, but watch out for impostors in Among Us.",
+      "supported-platforms": ["PC", "iOS", "Android", "Nintendo Switch"],
+      "release-date": "2018-11-16",
+      "publisher": "InnerSloth"
+    },
+    {
+      "game-name": "Candy Crush Saga",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1218340/header.jpg?t=1614060463",
+      "game-description": "Match candies and progress through hundreds of levels in Candy Crush Saga.",
+      "supported-platforms": ["iOS", "Android", "Facebook"],
+      "release-date": "2012-11-14",
+      "publisher": "King"
+    },
+    {
+      "game-name": "Plants vs. Zombies",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/3590/header.jpg?t=1568710188",
+      "game-description": "Defend your home from waves of zombies using an arsenal of zombie-zapping plants in Plants vs. Zombies.",
+      "supported-platforms": [
+        "PC",
+        "iOS",
+        "Android",
+        "PlayStation 3",
+        "Xbox 360",
+        "Nintendo DS",
+        "Nintendo DSiWare",
+        "Nintendo 3DS",
+        "PlayStation Vita"
+      ],
+      "release-date": "2009-05-05",
+      "publisher": "PopCap Games"
+    },
+    {
+      "game-name": "Fruit Ninja",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/12130/header.jpg?t=1553774083",
+      "game-description": "Swipe your screen to cut fruit and avoid bombs in the addictive Fruit Ninja.",
+      "supported-platforms": [
+        "iOS",
+        "Android",
+        "Windows Phone",
+        "Xbox 360",
+        "PlayStation Vita"
+      ],
+      "release-date": "2010-04-21",
+      "publisher": "Halfbrick Studios"
+    },
+    {
+      "game-name": "Angry Birds",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/105600/header.jpg?t=1632245948",
+      "game-description": "Launch birds at pigs using a slingshot in the classic physics-based game Angry Birds.",
+      "supported-platforms": [
+        "iOS",
+        "Android",
+        "PC",
+        "Mac",
+        "Windows Phone",
+        "PlayStation 3",
+        "Xbox 360",
+        "Nintendo DS",
+        "PSP",
+        "PlayStation Vita"
+      ],
+      "release-date": "2009-12-11",
+      "publisher": "Rovio Entertainment"
+    },
+    {
+      "game-name": "Doodle Jump",
+      "game-img": "https://steamuserimages-a.akamaihd.net/ugc/776225213127957716/8DE5E9CA18C3E58AD6C63D92E14CC508FE62759E/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+      "game-description": "Guide the Doodler up a series of platforms while avoiding obstacles in Doodle Jump.",
+      "supported-platforms": [
+        "iOS",
+        "Android",
+        "Windows Phone",
+        "PC",
+        "Nintendo DSiWare",
+        "Xbox 360",
+        "PlayStation Portable"
+      ],
+      "release-date": "2009-03-04",
+      "publisher": "Lima Sky"
+    },
+    {
+      "game-name": "Subway Surfers",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1429510/header.jpg?t=1605115502",
+      "game-description": "Run, jump, and dodge trains in the endless runner Subway Surfers.",
+      "supported-platforms": ["iOS", "Android", "Windows Phone"],
+      "release-date": "2012-05-24",
+      "publisher": "SYBO Games"
+    },
+    {
+      "game-name": "Bejeweled",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/3350/header.jpg?t=1567626953",
+      "game-description": "Match gems and collect points in the classic puzzle game Bejeweled.",
+      "supported-platforms": [
+        "PC",
+        "iOS",
+        "Android",
+        "PlayStation 3",
+        "Xbox 360",
+        "Nintendo DS",
+        "PSP"
+      ],
+      "release-date": "2001-05-30",
+      "publisher": "PopCap Games"
+    },
+    {
+      "game-name": "Tetris",
+      "game-img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaiIy7XUucXSOj7yV5vhrgmZfE-65jyvtr0hUsuBpN-Q&s",
+      "game-description": "Rotate and drop falling blocks to create lines and clear the board in Tetris.",
+      "supported-platforms": [
+        "PC",
+        "iOS",
+        "Android",
+        "Nintendo Entertainment System",
+        "Game Boy",
+        "Nintendo DS",
+        "PlayStation",
+        "Xbox",
+        "Nintendo 64"
+      ],
+      "release-date": "1984-06-06",
+      "publisher": "Various"
+    },
+    {
+      "game-name": "Crossy Road",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/422160/header.jpg?t=1549290102",
+      "game-description": "Cross roads, rivers, and train tracks in the endless arcade hopper Crossy Road.",
+      "supported-platforms": ["iOS", "Android"],
+      "release-date": "2014-11-20",
+      "publisher": "Hipster Whale"
+    }
+  ],
+  "simulationGames": [
+    {
+      "game-name": "The Sims 4",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1222670/header.jpg?t=1639477393",
+      "game-description": "Create unique Sims, build homes, and control their lives in The Sims 4.",
+      "supported-platforms": ["PC", "Mac", "PlayStation 4", "Xbox One"],
+      "release-date": "2014-09-02",
+      "publisher": "Electronic Arts"
+    },
+    {
+      "game-name": "Microsoft Flight Simulator",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1250410/header.jpg?t=1645611671",
+      "game-description": "Experience the most realistic flight simulation with Microsoft Flight Simulator.",
+      "supported-platforms": ["PC", "Xbox Series X/S"],
+      "release-date": "2020-08-18",
+      "publisher": "Xbox Game Studios"
+    },
+    {
+      "game-name": "Euro Truck Simulator 2",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/227300/header.jpg?t=1646866283",
+      "game-description": "Drive trucks across Europe, build your trucking empire in Euro Truck Simulator 2.",
+      "supported-platforms": ["PC", "Mac", "Linux"],
+      "release-date": "2012-10-19",
+      "publisher": "SCS Software"
+    },
+    {
+      "game-name": "Stardew Valley",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/413150/header.jpg?t=1647153422",
+      "game-description": "Escape to the countryside and build a thriving farm in Stardew Valley.",
+      "supported-platforms": [
+        "PC",
+        "Mac",
+        "Linux",
+        "PlayStation 4",
+        "Xbox One",
+        "Nintendo Switch",
+        "iOS",
+        "Android"
+      ],
+      "release-date": "2016-02-26",
+      "publisher": "ConcernedApe"
+    },
+    {
+      "game-name": "Cities: Skylines",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/255710/header.jpg?t=1639094004",
+      "game-description": "Build and manage a bustling city in Cities: Skylines.",
+      "supported-platforms": [
+        "PC",
+        "Mac",
+        "Linux",
+        "PlayStation 4",
+        "Xbox One",
+        "Nintendo Switch"
+      ],
+      "release-date": "2015-03-10",
+      "publisher": "Paradox Interactive"
+    },
+    {
+      "game-name": "Planet Zoo",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/703080/header.jpg?t=1646865375",
+      "game-description": "Create and manage a zoo with authentic living animals in Planet Zoo.",
+      "supported-platforms": ["PC"],
+      "release-date": "2019-11-05",
+      "publisher": "Frontier Developments"
+    },
+    {
+      "game-name": "Football Manager 2022",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/1517260/header.jpg?t=1645154391",
+      "game-description": "Take control of your favorite football club in Football Manager 2022.",
+      "supported-platforms": [
+        "PC",
+        "Mac",
+        "iOS",
+        "Android",
+        "Xbox Series X/S",
+        "Xbox One"
+      ],
+      "release-date": "2021-11-09",
+      "publisher": "Sega"
+    },
+    {
+      "game-name": "House Flipper",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/613100/header.jpg?t=1626856500",
+      "game-description": "Buy, repair, and renovate houses to turn a profit in House Flipper.",
+      "supported-platforms": [
+        "PC",
+        "PlayStation 4",
+        "Xbox One",
+        "Nintendo Switch",
+        "iOS",
+        "Android"
+      ],
+      "release-date": "2018-05-17",
+      "publisher": "PlayWay S.A."
+    },
+    {
+      "game-name": "Flight Simulator X",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/314160/header.jpg?t=1645565367",
+      "game-description": "Take to the skies in the iconic Flight Simulator X.",
+      "supported-platforms": ["PC"],
+      "release-date": "2006-10-17",
+      "publisher": "Microsoft Game Studios"
+    },
+    {
+      "game-name": "The Escapists 2",
+      "game-img": "https://cdn.akamai.steamstatic.com/steam/apps/641990/header.jpg?t=1646889895",
+      "game-description": "Plan your escape from the toughest prisons in The Escapists 2.",
+      "supported-platforms": [
+        "PC",
+        "PlayStation 4",
+        "Xbox One",
+        "Nintendo Switch",
+        "iOS",
+        "Android"
+      ],
+      "release-date": "2017-08-22",
+      "publisher": "Team17 Digital Ltd"
     }
   ]
 }

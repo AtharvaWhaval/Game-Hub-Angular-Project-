@@ -9,12 +9,7 @@
     </div>
 
     <div class="login">
-      <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
-        <!-- <mat-form-field appearance="outline" class="input-field">
-        <mat-label>Username</mat-label>
-        <input matInput formControlName="userName" />
-        <mat-icon matSuffix color="primary">account_circle</mat-icon>
-      </mat-form-field> -->
+      <form [formGroup]="signInForm" (ngSubmit)="onLogin()">
         <div class="mb-3" style="text-align: start">
           <label for="exampleInputEmail1" class="form-label signin-label"
             >SIGN IN WITH ACCOUNT USERNAME</label
@@ -22,13 +17,20 @@
           <input
             type="text"
             class="form-control input-field"
-            id="exampleInputEmail1"
+            id="username"
             aria-describedby="emailHelp"
             formControlName="userName"
           />
-          <!-- <div id="emailHelp" class="form-text">
-          We'll never share your email with anyone else.
-        </div> -->
+          <div
+            id="emailHelp"
+            class="inputError"
+            *ngIf="
+              this.signInForm.controls.userName.touched &&
+              this.signInForm.controls.userName.invalid
+            "
+          >
+            *Username should only include charcaters.!
+          </div>
         </div>
         <br />
         <!-- <mat-form-field appearance="outline">
@@ -52,13 +54,22 @@
           <input
             type="password"
             class="form-control input-field"
-            id="exampleInputEmail1"
+            id="password"
             aria-describedby="emailHelp"
             formControlName="password"
           />
-          <!-- <div id="emailHelp" class="form-text">
-          We'll never share your email with anyone else.
-        </div> -->
+          <div
+            id="passwordHelp"
+            class="inputError"
+            *ngIf="
+              this.signInForm.controls.password.touched &&
+              this.signInForm.controls.password.invalid
+            "
+          >
+            *Password should contain atleast 1 uppercase and 1 lowercase
+            character, 1 special character, 1 number and it should range between
+            8-15.!
+          </div>
         </div>
 
         <div class="submit-button">

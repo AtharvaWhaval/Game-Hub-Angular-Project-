@@ -1,42 +1,30 @@
+<!-- <div id="card-area">
+  <div class="wrapper">
+    <h1 class="genre-name">{{ genreName | titlecase }}</h1>
+    <div class="box-area">
+      <div class="box" *ngFor="let game of specificGenreGames">
+        <img class="img-style" alt="" [src]="game['game-img']" />
+        <div class="overlay">
+          <h3>{{ game["game-name"] }}</h3>
+          <p>
+            {{ game["game-description"] }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
 <div id="card-area">
   <div class="wrapper">
+    <h1 class="genre-name">{{ genreName | titlecase }}</h1>
     <div class="box-area">
-      <div class="box">
-        <img
-          alt=""
-          src="https://www.cbc.ca/kids/images/shootthecannon_thumbnail.jpg"
-        />
+      <div class="box" *ngFor="let game of specificGenreGames">
+        <img class="img-style" alt="" [src]="game['game-img']" />
         <div class="overlay">
-          <h3>Mountaineering</h3>
+          <h3>{{ game["game-name"] }}</h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque modi
-            explicabo libero ea nam. Quod.
-          </p>
-        </div>
-      </div>
-      <div class="box">
-        <img
-          alt=""
-          src="https://www.cbc.ca/kids/images/shootthecannon_thumbnail.jpg"
-        />
-        <div class="overlay">
-          <h3>Scuba Diving</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque modi
-            explicabo libero ea nam. Quod.
-          </p>
-        </div>
-      </div>
-      <div class="box">
-        <img
-          alt=""
-          src="https://www.cbc.ca/kids/images/shootthecannon_thumbnail.jpg"
-        />
-        <div class="overlay">
-          <h3>Travel World</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque modi
-            explicabo libero ea nam. Quod.
+            {{ game["game-description"] }}
           </p>
         </div>
       </div>

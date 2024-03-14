@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -12,20 +14,49 @@ export class SignupComponent {
   isConfirmPasswordVisible: boolean = false;
   confirmPasswordIconToDisplay: string = 'visibility';
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private userService: UserService,
+    private router: Router
+  ) {}
 
   signupForm = this.fb.group({
-    firstName: ['', Validators.required],
-    lastName: ['', Validators.required],
-    userName: ['', Validators.required],
-    email: ['', Validators.required],
-    password: ['', Validators.required],
+    firstName: ['', [Validators.required, Validators.pattern(/^[A-Za-z]+$/)]],
+    lastName: ['', [Validators.required, Validators.pattern(/^[A-Za-z]+$/)]],
+    userName: [
+      '',
+      [Validators.required, Validators.pattern(/^[a-zA-Z0-9.@]+$/)],
+    ],
+    email: [
+      '',
+      [
+        Validators.required,
+        Validators.pattern(/^[a-zA-Z0–9._-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,4}$/),
+      ],
+    ],
+    password: [
+      '',
+      [
+        Validators.required,
+        Validators.pattern(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,15}$/
+        ),
+      ],
+    ],
     confirmPassword: ['', Validators.required],
   });
 
   onSubmit() {
+    console.log(this.signupForm);
     if (this.signupForm.valid) {
-      console.log(this.signupForm.value);
+      this.userService.registerUser(this.signupForm.value).subscribe({
+        next: (val: any) => {
+          console.log(val);
+        },
+        error: console.log,
+      });
+      alert('User registered successfully.!');
+      this.router.navigate(['/login']);
     } else {
       alert('Please fill the valid credentials.!');
     }

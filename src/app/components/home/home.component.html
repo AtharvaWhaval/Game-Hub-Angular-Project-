@@ -113,8 +113,8 @@
   <div class="team-area row">
     <div
       class="box col-md-4"
-      *ngFor="let genre of gameGenre"
-      (click)="(openGenrePage)"
+      *ngFor="let genre of gameGenreList"
+      routerLink="game-genre-cards/{{ genre.genreName }}"
     >
       <figcaption>
         <h2>{{ genre.genreName }}</h2>
@@ -124,6 +124,7 @@
     </div>
   </div>
 </section>
+<router-outlet></router-outlet>
 
 <!-- <hr />
 <div class="footer">

@@ -11,7 +11,8 @@ import { LoginComponent } from './components/Authentication Components/login/log
 import { SignupComponent } from './components/Authentication Components/signup/signup.component';
 import { IndexComponent } from './components/index/index.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './components/Authentication Components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,16 +23,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     SignupComponent,
     LoginComponent,
-    IndexComponent
-    
+    IndexComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

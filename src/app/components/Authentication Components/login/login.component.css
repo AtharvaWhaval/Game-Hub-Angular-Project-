@@ -16,7 +16,9 @@
     padding: 20px;
     border-radius: 10px;
     background-color: black;
-    min-width: 636px;
+    /* min-width: 636px;
+    max-width: 636px; */
+    width:55%;
     padding: 30px;
     
 }
@@ -86,5 +88,10 @@
     margin:20px;
     justify-content: start;
     align-items: start;
-    width:600px;
+    width:55%;
+}
+.inputError {
+  color: red;
+  font-size: small;
+  height: 7px;
 }

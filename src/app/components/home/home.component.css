@@ -36,10 +36,10 @@ body {
 .box figcaption {
 	position: absolute;
 	width: 100%;
-	bottom: 35%;
+	bottom: 32%;
 	padding: 20px;
 	text-align: center;
-	background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(225, 53, 53,1),rgb(255,0,0,1));
+	background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(39, 84, 168),rgb(10, 45, 97));
 	transform: translateY(100%);
 	transition: transform 0.5s ease;
     /* opacity: 70%; */
@@ -49,7 +49,7 @@ body {
 	transform: translateY(0);
 } */
 .box h2 {
-	font-size: 40px;
+	font-size: 30px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-family: "Bebas Neue", sans-serif;
@@ -81,10 +81,11 @@ body {
 .section-headings {
     margin-top: 50px;
     margin-bottom: 0px;
-    font-size: 40px;
+    font-size: 50px;
     display: flex;
 	align-items: center;
 	justify-content: center;
+	color: white;
 }
 /* .footer {
     background-color: #202020;

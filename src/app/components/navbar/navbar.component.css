@@ -1,0 +1,8 @@
+.navbar-links a {
+    font-size: larger;
+    font-variant: small-caps;
+    font-weight: 100;
+}
+.activeLink {
+    color: #1999ff;
+}
