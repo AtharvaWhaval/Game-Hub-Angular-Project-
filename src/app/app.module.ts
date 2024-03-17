@@ -14,6 +14,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './components/Authentication Components/not-found/not-found.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AboutComponent } from './components/about/about.component';
+import { MyStoreComponent } from './components/my-store/my-store.component';
+import { GameDetailsComponent } from './components/game-details/game-details.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { CrudGamesComponent } from './components/crud-games/crud-games.component';
+import { GamesCrudMainComponent } from './components/games-crud-main/games-crud-main.component';
+import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +34,13 @@ import { ProfileComponent } from './components/profile/profile.component';
     IndexComponent,
     NotFoundComponent,
     ProfileComponent,
+    AboutComponent,
+    MyStoreComponent,
+    GameDetailsComponent,
+    AdminPanelComponent,
+    CrudGamesComponent,
+    GamesCrudMainComponent,
+    ConfirmationModalComponent,
   ],
   imports: [
     BrowserModule,

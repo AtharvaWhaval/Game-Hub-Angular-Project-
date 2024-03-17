@@ -8,6 +8,12 @@ import { GameGenreCardsComponent } from './components/game-genre-cards/game-genr
 import { CanActivate } from './guards/auth-guard';
 import { NotFoundComponent } from './components/Authentication Components/not-found/not-found.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AboutComponent } from './components/about/about.component';
+import { MyStoreComponent } from './components/my-store/my-store.component';
+import { GameDetailsComponent } from './components/game-details/game-details.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { CrudGamesComponent } from './components/crud-games/crud-games.component';
+import { GamesCrudMainComponent } from './components/games-crud-main/games-crud-main.component';
 
 const routes: Routes = [
   {
@@ -48,9 +54,33 @@ const routes: Routes = [
         component: GameGenreCardsComponent,
       },
       {
+        path: 'home/game-genre-cards/:genrename/game-details/:gameId',
+        component: GameDetailsComponent,
+      },
+      {
         path: 'profile',
-        component: ProfileComponent
-      }
+        component: ProfileComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+      },
+      {
+        path: 'myStore',
+        component: MyStoreComponent,
+      },
+      {
+        path: 'adminPanel',
+        component: AdminPanelComponent,
+      },
+      {
+        path: 'adminPanel/addGames',
+        component: CrudGamesComponent,
+      },
+      {
+        path: 'adminPanel/gamesCrudMain',
+        component: GamesCrudMainComponent,
+      },
     ],
   },
 ];

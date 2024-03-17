@@ -108,11 +108,11 @@ export class LoginComponent implements OnInit {
       },
       error: console.log,
     });
-    this.authService.getAdminsList().subscribe({
-      next: (aList: any) => {
-        this.admin = aList;
-      },
-      error: console.log,
-    });
+    // this.authService.getAdminsList().subscribe({
+    //   next: (aList: any) => {
+    //     this.admin = aList;
+    //   },
+    //   error: console.log,
+    // });
   }
 }

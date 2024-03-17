@@ -7,6 +7,8 @@ import { Observable, catchError, of, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
+  userJson: any;
+  loggedinuser: any;
   constructor(private http: HttpClient, private router: Router) {}
 
   getUsersList(): Observable<any> {
@@ -17,11 +19,13 @@ export class AuthService {
   }
 
   setLoggedInUser(user: any): void {
-    localStorage.setItem('LoggedInUser', user);
+    localStorage.setItem('LoggedInUser', JSON.stringify(user));
   }
 
-  getLoggedInUser(): any | null {
-    return localStorage.getItem('LoggedInUser');
+  getLoggedInUser(): Observable<any> | any | null {
+    this.loggedinuser = localStorage.getItem('LoggedInUser');
+    // console.log(JSON.parse(this.loggedinuser));
+    return JSON.parse(this.loggedinuser);
   }
 
   login({ userName, password }: any, usersList: any) {

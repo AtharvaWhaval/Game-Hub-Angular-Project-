@@ -26,11 +26,11 @@ export class HomeComponent {
     this.setUpcomingGamesList();
     this.setGamesGenreList();
 
-    this.gameGenreList.forEach((g: any) => {
-      if (g.name == this.activatedRoute.snapshot.params['genreName']) {
-        this.genre = g;
-      }
-    });
+    // this.gameGenreList.forEach((g: any) => {
+    //   if (g.name == this.activatedRoute.snapshot.params['genreName']) {
+    //     this.genre = g;
+    //   }
+    // });
   }
 
   changeSlide(index: number): void {

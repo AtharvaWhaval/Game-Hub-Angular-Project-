@@ -19,6 +19,12 @@ export class ApplicationService {
   getActionGenreCards(): Observable<any> {
     return this.http.get('http://localhost:3000/actionGames');
   }
+  setActionGenreCards(data: any) {
+    return this.http.post('http://localhost:3000/actionGames', data);
+  }
+  deleteGame(id: number) {
+    return this.http.delete(`http://localhost:3000/actionGames/${id}`);
+  }
 
   getSportGenreCards(): Observable<any> {
     return this.http.get('http://localhost:3000/sportGames');
