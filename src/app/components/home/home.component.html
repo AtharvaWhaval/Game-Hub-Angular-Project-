@@ -1,7 +1,7 @@
 <!-- Your Bootstrap Carousel HTML code -->
 <div
   id="carouselExampleCaptions"
-  class="carousel slide"
+  class="carousel slide mt-12"
   data-bs-ride="carousel"
 >
   <!-- Carousel Indicators -->
@@ -24,7 +24,7 @@
       [class.active]="i === currentSlideIndex"
     >
       <img
-        [src]="game.gameImg"
+        [src]="game.gameImgUrl"
         class="d-block w-100"
         [alt]="game.gameName"
         style="height: 500px"
@@ -114,13 +114,13 @@
     <div
       class="box col-md-4"
       *ngFor="let genre of gameGenreList"
-      routerLink="game-genre-cards/{{ genre.genreName }}"
+      routerLink="game-genre-cards/{{ genre.genreId }}"
     >
       <figcaption>
         <h2>{{ genre.genreName }}</h2>
       </figcaption>
 
-      <img alt="" [src]="genre.genreImg" style="height: 220px" />
+      <img alt="" [src]="genre.genreImgUrl" style="height: 220px" />
     </div>
   </div>
 </section>

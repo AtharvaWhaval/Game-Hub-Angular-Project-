@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApplicationService } from 'src/app/services/application/application.service';
 import { AuthService } from 'src/app/services/auth/auth.service';
 // import { AuthServiceService } from 'src/app/services/auth/auth-service.service';
 
@@ -18,6 +19,8 @@ export class LoginComponent implements OnInit {
   uiValues?: any; // To store the values got from UI.
   isUserValid: boolean = false;
   isAdminValid: boolean = false;
+
+  generatedAlert!: string;
   // errHead!: boolean;
 
   togglePasswordVisibililty() {
@@ -32,7 +35,8 @@ export class LoginComponent implements OnInit {
     // private auth: AuthServiceService,
     private router: Router,
     private elementRef: ElementRef,
-    private authService: AuthService
+    private authService: AuthService,
+    private appService: ApplicationService
   ) {
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor =
       'white';
@@ -68,14 +72,34 @@ export class LoginComponent implements OnInit {
     console.log(this.users);
 
     if (this.signInForm.valid) {
-      this.authService.login(this.signInForm.value, this.users).subscribe({
-        next: (result) => {
-          console.log(result);
-          this.router.navigate(['/index']);
-          alert('Login Successfull.!');
+      // this.authService.login(this.signInForm.value, this.users).subscribe({
+      //   next: (result) => {
+      //     console.log(result);
+      //     this.router.navigate(['/index']);
+      //     alert('Login Successfull.!');
+      //   },
+      //   error: (err: Error) => {
+      //     alert(err.message);
+      //   },
+      // });
+
+      this.authService.login(this.uiValues).subscribe({
+        next: (res) => {
+          // console.log(res);
+          this.authService.setLoggedInUser(res);
+          this.router.navigate(['index']);
         },
-        error: (err: Error) => {
-          alert(err.message);
+        error: (error) => {
+          // console.error(error);
+          // alert('Incorrect Credentials!');
+          this.generatedAlert = this.appService.alertMsg(
+            'danger',
+            'Incorrect Credentials!'
+          );
+          // Set a timeout to clear the alert message after 3 seconds
+          setTimeout(() => {
+            this.generatedAlert = '';
+          }, 3000);
         },
       });
 
@@ -94,6 +118,16 @@ export class LoginComponent implements OnInit {
       // } else {
       //   alert('User Login Failed');
       // }
+    } else {
+      // alert('All the fields are mandatory!');
+      this.generatedAlert = this.appService.alertMsg(
+        'info',
+        'All the fields are mandatory!'
+      );
+      // Set a timeout to clear the alert message after 3 seconds
+      setTimeout(() => {
+        this.generatedAlert = '';
+      }, 3000);
     }
 
     // console.log(this.signInForm.value);

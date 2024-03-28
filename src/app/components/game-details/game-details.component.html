@@ -1,34 +1,59 @@
 <!-- <p style="color: white">{{ game | json }}</p> -->
 
-<div class="bg-white py-10 sm:py-16 flex justify-center items-center">
+<div class="bg-white py-10 sm:py-16 flex justify-center items-center relative">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      class="alert-container z-50 position-fixed top-20 left-0 right-0 h-10"
+      [innerHTML]="generatedAlert"
+    ></div>
+
     <div class="mx-auto max-w-2xl lg:mx-0">
-      <img [src]="game['game-img']" style="width: 200%; height: 200%" />
+      <img
+        [src]="currentGame['gameImgUrl']"
+        style="width: 200%; height: 200%"
+      />
 
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        {{ game["game-name"] }}
+        {{ currentGame["gameName"] }}
       </h2>
       <p class="mt-2 text-lg leading-8 text-gray-600">
-        {{ game["game-description"] }}
+        {{ currentGame["gameDescription"] }}
       </p>
       <h6>Suported Platforms :-</h6>
-      <p *ngFor="let p of game['supported-platforms']">
-        {{ p }}
-      </p>
+      <!-- {{ currentGame["platforms"] | json }} -->
+      <!-- <p *ngFor="let p of currentGame['platforms']">
+        <img [src]="p['platformImgUrl']" width="30px" height="30px" />
+        {{ p["platformName"] }}
+
+        <img [src]="p.platformImgUrl" />
+      </p> -->
+      <div class="platform-container my-2">
+        <p *ngFor="let p of currentGame['platforms']" class="platform-item">
+          <img [src]="p['platformImgUrl']" width="30px" height="30px" />
+          <span>{{ p["platformName"] }}</span>
+        </p>
+      </div>
     </div>
     <div
       class="mx-auto mt-10 grid max-w-2xl gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none"
     >
       <article class="flex max-w-xl flex-col items-start justify-between">
         <div class="flex items-center gap-x-4 text-xs">
-          <time datetime="2020-03-16" class="text-gray-500">{{
-            game["release-date"]
-          }}</time>
-          <!-- <a
+          <!-- <time datetime="2020-03-16" class="text-gray-500">{{
+            2020 - 03 - 16
+          }}</time> -->
+          <div class="flex-col">
+            <p class="font-semibold text-gray-500">
+              {{ currentGame["releasedDate"].slice(0, 10) }}
+            </p>
+            <br />
+            <p class="text-gray-600">Released Date</p>
+            <!-- <a
             href="#"
             class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
             >Marketing</a
           > -->
+          </div>
         </div>
         <div class="group relative">
           <!-- <h3
@@ -53,15 +78,19 @@
             <p class="font-semibold text-gray-900">
               <!-- <a href="#"> -->
               <span class="absolute inset-0"></span>
-              {{ game["publisher"] }}
+              {{ currentGame["publisher"] }}
               <!-- </a> -->
             </p>
             <p class="text-gray-600">Publisher</p>
           </div>
         </div>
         <div class="my-8 px-40">
-          <button class="bg-slate-600 text-lg text-white p-2 rounded-md">
-            Download
+          <button
+            type="button"
+            class="bg-slate-600 text-lg text-white p-2 rounded-md"
+            (click)="onDownloadClick()"
+          >
+            {{ installButtonText }}
           </button>
         </div>
       </article>

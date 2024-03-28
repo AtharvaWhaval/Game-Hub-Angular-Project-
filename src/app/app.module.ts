@@ -20,7 +20,6 @@ import { GameDetailsComponent } from './components/game-details/game-details.com
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { CrudGamesComponent } from './components/crud-games/crud-games.component';
 import { GamesCrudMainComponent } from './components/games-crud-main/games-crud-main.component';
-import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +39,6 @@ import { ConfirmationModalComponent } from './components/confirmation-modal/conf
     AdminPanelComponent,
     CrudGamesComponent,
     GamesCrudMainComponent,
-    ConfirmationModalComponent,
   ],
   imports: [
     BrowserModule,

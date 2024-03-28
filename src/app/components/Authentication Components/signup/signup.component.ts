@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApplicationService } from 'src/app/services/application/application.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
@@ -13,17 +15,22 @@ export class SignupComponent {
   passwordIconToDisplay: string = 'visibility';
   isConfirmPasswordVisible: boolean = false;
   confirmPasswordIconToDisplay: string = 'visibility';
+  sendSignupValues!: any;
+
+  generatedAlert!: string;
 
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService,
+    private appService: ApplicationService
   ) {}
 
   signupForm = this.fb.group({
-    firstName: ['', [Validators.required, Validators.pattern(/^[A-Za-z]+$/)]],
-    lastName: ['', [Validators.required, Validators.pattern(/^[A-Za-z]+$/)]],
-    userName: [
+    firstname: ['', [Validators.required, Validators.pattern(/^[A-Za-z]+$/)]],
+    lastname: ['', [Validators.required, Validators.pattern(/^[A-Za-z]+$/)]],
+    username: [
       '',
       [Validators.required, Validators.pattern(/^[a-zA-Z0-9.@]+$/)],
     ],
@@ -47,18 +54,61 @@ export class SignupComponent {
   });
 
   onSubmit() {
-    console.log(this.signupForm);
+    // console.log(this.signupForm);
     if (this.signupForm.valid) {
-      this.userService.registerUser(this.signupForm.value).subscribe({
-        next: (val: any) => {
-          console.log(val);
+      // this.userService.registerUser(this.signupForm.value).subscribe({
+      //   next: (val: any) => {
+      //     console.log(val);
+      //   },
+      //   error: console.log,
+      // });
+
+      this.sendSignupValues = this.signupForm.value;
+
+      //deleting confirmPassword as it is not required
+      delete this.sendSignupValues.confirmPassword;
+
+      //adding the isAdmin property
+      this.sendSignupValues.isAdmin = false;
+
+      console.log(this.signupForm.value);
+
+      this.authService.userSignUp(this.sendSignupValues).subscribe({
+        next: (res) => {
+          console.log(res);
+          // alert('User Signup successfull!');
+          this.generatedAlert = this.appService.alertMsg(
+            'success',
+            'Signup successfull!'
+          );
+          // Set a timeout to clear the alert message after 3 seconds
+          setTimeout(() => {
+            this.generatedAlert = '';
+          }, 3000);
+          this.router.navigate(['/login']);
         },
-        error: console.log,
+        error: (err) => {
+          console.log(err);
+          this.generatedAlert = this.appService.alertMsg(
+            'danger',
+            'Signup Unsuccessfull, try with another email and username!'
+          );
+          // Set a timeout to clear the alert message after 3 seconds
+          setTimeout(() => {
+            this.generatedAlert = '';
+          }, 3000);
+        },
       });
-      alert('User registered successfully.!');
-      this.router.navigate(['/login']);
     } else {
-      alert('Please fill the valid credentials.!');
+      // alert('Please fill the valid credentials.!');
+      this.generatedAlert = this.appService.alertMsg(
+        'info',
+        'Please fill the valid credentials.!'
+      );
+      // Set a timeout to clear the alert message after 3 seconds
+      setTimeout(() => {
+        this.generatedAlert = '';
+      }, 3000);
     }
   }
 

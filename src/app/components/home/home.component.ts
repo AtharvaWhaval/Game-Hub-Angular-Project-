@@ -59,6 +59,8 @@ export class HomeComponent {
   setUpcomingGamesList() {
     this.service.getUpcomingGames().subscribe({
       next: (res: any) => {
+        // console.log(res);
+
         this.upcomingGames = res;
       },
       error: console.log,
@@ -66,8 +68,10 @@ export class HomeComponent {
   }
 
   setGamesGenreList() {
-    this.service.getGamesGenre().subscribe({
+    this.service.getGenres().subscribe({
       next: (res: any) => {
+        console.log(res);
+
         this.gameGenreList = res;
       },
       error: console.log,

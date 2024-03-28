@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, Routes } from '@angular/router';
 import { ApplicationService } from 'src/app/services/application/application.service';
+import { CrudGamesComponent } from '../crud-games/crud-games.component';
 
 @Component({
   selector: 'app-games-crud-main',
@@ -10,7 +12,9 @@ export class GamesCrudMainComponent implements OnInit {
   gamesList!: any;
   isModalOpen: boolean = false;
   tempDeleteGame!: any;
-  constructor(private appService: ApplicationService) {}
+
+  generatedAlert!: string;
+  constructor(private appService: ApplicationService, private router: Router) {}
 
   ngOnInit(): void {
     this.getGamesList();
@@ -21,15 +25,17 @@ export class GamesCrudMainComponent implements OnInit {
     this.isModalOpen = !this.isModalOpen;
   }
   setDeletingGame(game: any) {
-    this.isModalOpen = !this.isModalOpen;
+    // this.isModalOpen = !this.isModalOpen;
+    this.toggleModal();
     this.tempDeleteGame = game;
   }
 
   getGamesList() {
-    this.appService.getActionGenreCards().subscribe({
+    this.appService.getGames().subscribe({
       next: (val) => {
+        // console.log(val);
         this.gamesList = val;
-        console.log(this.gamesList);
+        // console.log(this.gamesList);
       },
       error: console.log,
     });
@@ -38,7 +44,15 @@ export class GamesCrudMainComponent implements OnInit {
   deleteGame(id: number) {
     this.appService.deleteGame(id).subscribe({
       next: (res: any) => {
-        alert('Game deleted.!');
+        // alert('Game deleted.!');
+        this.generatedAlert = this.appService.alertMsg(
+          'success',
+          'Game deleted.!'
+        );
+        // Set a timeout to clear the alert message after 3 seconds
+        setTimeout(() => {
+          this.generatedAlert = '';
+        }, 3000);
         this.toggleModal();
         this.getGamesList();
       },

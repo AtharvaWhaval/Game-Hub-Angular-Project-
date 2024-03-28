@@ -1,10 +1,19 @@
 <!-- component -->
 <!-- This is an example component -->
+<div
+  class="alert-container z-50 position-fixed top-20 left-0 right-0 h-10"
+  [innerHTML]="generatedAlert"
+></div>
 <div class="m-10">
   <div class="max-w-5xl mx-auto">
     <div class="flex flex-col">
       <div class="overflow-x-auto shadow-md sm:rounded-lg">
         <div class="inline-block min-w-full align-middle">
+          <div class="flex">
+            <div class="flex-start"><h1>List of Games</h1></div>
+            <!-- <div class="flex-end"><button>Add Game</button></div> -->
+          </div>
+
           <div class="overflow-hidden">
             <table
               class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700"
@@ -57,17 +66,17 @@
                   <td
                     class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
-                    {{ game.id }}
+                    {{ game.gameId }}
                   </td>
                   <td
                     class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white"
                   >
-                    <img [src]="game['game-img']" alt="" />
+                    <img [src]="game['gameImgUrl']" alt="" />
                   </td>
                   <td
                     class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
-                    {{ game["game-name"] }}
+                    {{ game["gameName"] }}
                   </td>
                   <td
                     class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
@@ -77,13 +86,14 @@
                   <td
                     class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
-                    {{ game["release-date"] }}
+                    {{ game["releaseDate"] }}
                   </td>
                   <td
                     class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap"
                   >
                     <a
-                      routerLink="../addGames"
+                      [routerLink]="['../addGames']"
+                      [queryParams]="{ id: game.gameId }"
                       class="text-blue-600 dark:text-blue-500 hover:underline"
                       >Edit</a
                     >
@@ -161,9 +171,9 @@
               </h3>
               <div class="mt-2">
                 <p class="text-sm text-gray-500">
-                  Id:- {{ tempDeleteGame["id"] }} <br />
+                  Id:- {{ tempDeleteGame["gameId"] }} <br />
                   Game Name:-
-                  {{ tempDeleteGame["game-name"] }}
+                  {{ tempDeleteGame["gameName"] }}
                 </p>
               </div>
             </div>
@@ -175,7 +185,7 @@
           <button
             type="button"
             class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
-            (click)="deleteGame(tempDeleteGame.id)"
+            (click)="deleteGame(tempDeleteGame.gameId)"
           >
             Delete <br />Game
           </button>

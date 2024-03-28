@@ -17,18 +17,18 @@
 
 <div id="card-area">
   <div class="wrapper">
-    <h1 class="genre-name">{{ genreName | titlecase }}</h1>
+    <!-- <h1 class="genre-name">{{ genreName | titlecase }}</h1> -->
     <div class="box-area">
       <div
         class="box"
         *ngFor="let game of specificGenreGames"
-        routerLink="game-details/{{ game.id }}"
+        routerLink="game-details/{{ game.gameId }}"
       >
-        <img class="img-style" alt="" [src]="game['game-img']" />
+        <img class="img-style" alt="" [src]="game['gameImgUrl']" />
         <div class="overlay">
-          <h3>{{ game["game-name"] }}</h3>
+          <h3>{{ game["gameName"] }}</h3>
           <p>
-            {{ game["game-description"] }}
+            {{ game["gameDescription"] }}
           </p>
         </div>
       </div>

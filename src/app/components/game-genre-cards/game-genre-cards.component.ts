@@ -9,7 +9,7 @@ import { ApplicationService } from 'src/app/services/application/application.ser
 })
 export class GameGenreCardsComponent implements OnInit {
   //  actionGenreGames!: any;
-  genreName!: any;
+  genreId!: any;
   specificGenreGames!: any;
   // game!: any;
 
@@ -21,76 +21,87 @@ export class GameGenreCardsComponent implements OnInit {
   ngOnInit(): void {
     // this.genreName = this.activatedRoute.snapshot.paramMap.get('genre-name');
     this.activatedRoute.params.subscribe((val) => {
-      this.genreName = val['genrename'];
+      this.genreId = val['genreId'];
     });
-    this.setGenreCards();
+    this.setGenreCards(this.genreId);
   }
 
-  setGenreCards() {
-    switch (this.genreName) {
-      case 'action': {
-        this.service.getActionGenreCards().subscribe({
-          next: (res: any) => {
-            this.specificGenreGames = res;
-          },
-          error: console.log,
-        });
-        break;
-      }
-      case 'sports': {
-        this.service.getSportGenreCards().subscribe({
-          next: (res: any) => {
-            this.specificGenreGames = res;
-          },
-          error: console.log,
-        });
-        break;
-      }
-      case 'strategy': {
-        this.service.getStrategyGenreCards().subscribe({
-          next: (res: any) => {
-            this.specificGenreGames = res;
-          },
-          error: console.log,
-        });
-        break;
-      }
-      case 'racing': {
-        this.service.getRacingGenreCards().subscribe({
-          next: (res: any) => {
-            this.specificGenreGames = res;
-          },
-          error: console.log,
-        });
-        break;
-      }
-      case 'casual': {
-        this.service.getCasualGenreCards().subscribe({
-          next: (res: any) => {
-            this.specificGenreGames = res;
-          },
-          error: console.log,
-        });
-        break;
-      }
-      case 'simulation': {
-        this.service.getSimulationGenreCards().subscribe({
-          next: (res: any) => {
-            this.specificGenreGames = res;
-          },
-          error: console.log,
-        });
-        break;
-      }
-    }
+  setGenreCards(genreId: number) {
+    this.service.getSpecificGenreGames(genreId).subscribe({
+      next: (res: any) => {
+        console.log(res);
 
-    // if (this.genreName === 'action') {
-    //   this.service.getActionGenreCards().subscribe({
-    //     next: (res: any) => {
-    //       this.specificGenreGames = res;
-    //     },
-    //     error: console.log,
-    //   });
-    // }
+        this.specificGenreGames = res;
+      },
+      error: console.log,
+    });
   }
+
+  // setGenreCards() {
+  //   switch (this.genreName) {
+  //     case 'action': {
+  //       this.service.getActionGenreCards().subscribe({
+  //         next: (res: any) => {
+  //           this.specificGenreGames = res;
+  //         },
+  //         error: console.log,
+  //       });
+  //       break;
+  //     }
+  //     case 'sports': {
+  //       this.service.getSportGenreCards().subscribe({
+  //         next: (res: any) => {
+  //           this.specificGenreGames = res;
+  //         },
+  //         error: console.log,
+  //       });
+  //       break;
+  //     }
+  //     case 'strategy': {
+  //       this.service.getStrategyGenreCards().subscribe({
+  //         next: (res: any) => {
+  //           this.specificGenreGames = res;
+  //         },
+  //         error: console.log,
+  //       });
+  //       break;
+  //     }
+  //     case 'racing': {
+  //       this.service.getRacingGenreCards().subscribe({
+  //         next: (res: any) => {
+  //           this.specificGenreGames = res;
+  //         },
+  //         error: console.log,
+  //       });
+  //       break;
+  //     }
+  //     case 'casual': {
+  //       this.service.getCasualGenreCards().subscribe({
+  //         next: (res: any) => {
+  //           this.specificGenreGames = res;
+  //         },
+  //         error: console.log,
+  //       });
+  //       break;
+  //     }
+  //     case 'simulation': {
+  //       this.service.getSimulationGenreCards().subscribe({
+  //         next: (res: any) => {
+  //           this.specificGenreGames = res;
+  //         },
+  //         error: console.log,
+  //       });
+  //       break;
+  //     }
+  //   }
+
+  //   // if (this.genreName === 'action') {
+  //   //   this.service.getActionGenreCards().subscribe({
+  //   //     next: (res: any) => {
+  //   //       this.specificGenreGames = res;
+  //   //     },
+  //   //     error: console.log,
+  //   //   });
+  //   // }
+  // }
 }

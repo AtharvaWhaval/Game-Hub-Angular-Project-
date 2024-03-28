@@ -14,6 +14,7 @@ import { GameDetailsComponent } from './components/game-details/game-details.com
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { CrudGamesComponent } from './components/crud-games/crud-games.component';
 import { GamesCrudMainComponent } from './components/games-crud-main/games-crud-main.component';
+import { CanActivateAdminPanel } from './guards/admin-guard';
 
 const routes: Routes = [
   {
@@ -50,7 +51,7 @@ const routes: Routes = [
         pathMatch: 'prefix',
       },
       {
-        path: 'home/game-genre-cards/:genrename',
+        path: 'home/game-genre-cards/:genreId',
         component: GameGenreCardsComponent,
       },
       {
@@ -72,6 +73,7 @@ const routes: Routes = [
       {
         path: 'adminPanel',
         component: AdminPanelComponent,
+        canActivate: [CanActivateAdminPanel],
       },
       {
         path: 'adminPanel/addGames',
